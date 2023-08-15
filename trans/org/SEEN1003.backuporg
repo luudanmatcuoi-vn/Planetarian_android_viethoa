@@ -1,0 +1,716 @@
+{-# cp utf8 #- Disassembled with Kprl 1.45 -}
+
+#file 'SEEN1003.TXT'
+#resource 'SEEN1003.utf'
+
+#kidoku_type 2
+
+#entrypoint 000 // Z00
+
+OBJFRONTGET_REPPOS(73, 0, intA[100], intA[101])
+intA[102] = -5
+intA[103] = -2
+intA[104] = 300
+gosub @1
+OBJFRONTGET_REPPOS(73, 0, intA[100], intA[101])
+intA[102] = 1
+intA[103] = 2
+intA[104] = 300
+gosub @1
+OBJFRONTGET_REPPOS(73, 0, intA[100], intA[101])
+intA[102] = 0
+intA[103] = -2
+intA[104] = 150
+gosub @1
+OBJFRONTGET_REPPOS(73, 0, intA[100], intA[101])
+intA[102] = 0
+intA[103] = 0
+intA[104] = 100
+gosub @1
+rtl
+
+#entrypoint 001 // Z01
+
+OBJFRONTGET_REPPOS(73, 0, intA[100], intA[101])
+intA[102] = 2
+intA[103] = -2
+intA[104] = 200
+gosub @1
+OBJFRONTGET_REPPOS(73, 0, intA[100], intA[101])
+intA[102] = -2
+intA[103] = 1
+intA[104] = 300
+gosub @1
+rtl
+
+#entrypoint 002 // Z02
+
+OBJFRONTGET_REPPOS(73, 0, intA[100], intA[101])
+intA[102] = -2
+intA[103] = 10
+intA[104] = 400
+gosub @1
+rtl
+
+  @1
+HideSyscom
+DrawManual
+FlushClick
+intC[0] = intA[104]
+InitExFrames({0, intA[100], intA[102], intC[0]}, {1, intA[101], intA[103], intC[0]})
+
+  @2
+intC[0] = ReadExFrames({0, intC[1]}, {1, intC[2]})
+GetCursorPos(intA[1000], intA[1001], intA[1002], intA[1003])
+goto_unless(intA[1002] == 2) @3
+intF[1000] = 1
+FlushClick
+goto @4
+
+  @3
+intF[1000] = 0
+
+  @4
+goto_unless(intF[1000] == 1) @5
+intC[0] = 0
+intC[1] = intA[102]
+intC[2] = intA[103]
+
+  @5
+objAdjust(73, 0, intC[1], intC[2])
+objAdjust(74, 0, intC[1], intC[2])
+refresh
+goto_unless(!intC[0]) @6
+goto @7
+
+  @6
+goto @2
+
+  @7
+DrawAuto
+EnableSyscom
+ret
+
+#entrypoint 010 // Z10
+
+HideSyscom
+DrawManual
+objClear(76)
+objOfFile(76, 'SIROB')
+objMove(76, 80, 14)
+objPattNo(76, 0)
+objDispRect(76, 80, 14, 640, 320)
+objShow(76, 0)
+objRepOrigin(73, 320, 160)
+objShow(74, 0)
+objShow(75, 0)
+wavPlay('SE11', 0, 0)
+wait(200)
+FlushClick
+intC[0] = 200
+InitExFrames({0, 100, 250, intC[0]})
+
+  @8
+intC[0] = ReadExFrames({0, intC[1]})
+GetCursorPos(intA[1000], intA[1001], intA[1002], intA[1003])
+goto_unless(intA[1002] == 2) @9
+intF[1000] = 1
+FlushClick
+goto @10
+
+  @9
+intF[1000] = 0
+
+  @10
+goto_unless(intF[1000] == 1) @11
+intC[0] = 0
+intC[1] = 250
+
+  @11
+objScale(73, intC[1], intC[1])
+refresh
+goto_unless(!intC[0]) @12
+goto @13
+
+  @12
+goto @8
+
+  @13
+objShow(76, 1)
+FlushClick
+intC[0] = 200
+InitExFrames({0, 0, 255, intC[0]})
+
+  @14
+intC[0] = ReadExFrames({0, intC[1]})
+GetCursorPos(intA[1000], intA[1001], intA[1002], intA[1003])
+goto_unless(intA[1002] == 2) @15
+intF[1000] = 1
+FlushClick
+goto @16
+
+  @15
+intF[1000] = 0
+
+  @16
+goto_unless(intF[1000] == 1) @17
+intC[0] = 0
+intC[1] = 255
+
+  @17
+objAlpha(76, intC[1])
+refresh
+goto_unless(!intC[0]) @18
+goto @19
+
+  @18
+goto @14
+
+  @19
+objDelete(76)
+strS[1001] = 'SIROB'
+intA[1000] = strcmp(strS[1001], 'NONE')
+goto_unless(!intA[1000]) @20
+strclear(strS[1001])
+
+  @20
+strS[1002] = 'NONE'
+intA[1000] = strcmp(strS[1002], 'NONE')
+goto_unless(!intA[1000]) @21
+strclear(strS[1002])
+
+  @21
+intF[1120] = 1
+intF[1116] = 0
+intF[1117] = 9
+strS[1003] = 'NONE'
+intA[1000] = strcmp(strS[1003], 'NONE')
+goto_unless(!intA[1000]) @22
+strclear(strS[1003])
+
+  @22
+intF[1112] = -1
+intF[1113] = -1
+intF[1114] = -1
+intF[1115] = -1
+farcall(9050, 0)
+intF[1120] = 0
+SET_WAIP_WINDOWCLOSE_OFF
+SET_GRPCOM_WINDOWCLOSE_OFF
+DrawAuto
+EnableSyscom
+rtl
+
+#entrypoint 011 // Z11
+
+HideSyscom
+DrawManual
+objClear(76)
+objOfFile(76, 'SIROB')
+objMove(76, 80, 14)
+objPattNo(76, 0)
+objDispRect(76, 80, 14, 640, 320)
+objShow(76, 1)
+objRepOrigin(73, 320, 160)
+objShow(74, 0)
+objShow(75, 0)
+wavPlay('SE11', 0, 0)
+wait(200)
+FlushClick
+intC[0] = 200
+InitExFrames({0, 0, 255, intC[0]}, {1, 100, 250, intC[0]})
+
+  @23
+intC[0] = ReadExFrames({0, intC[1]}, {1, intC[2]})
+GetCursorPos(intA[1000], intA[1001], intA[1002], intA[1003])
+goto_unless(intA[1002] == 2) @24
+intF[1000] = 1
+FlushClick
+goto @25
+
+  @24
+intF[1000] = 0
+
+  @25
+goto_unless(intF[1000] == 1) @26
+intC[0] = 0
+intC[1] = 255
+intC[2] = 250
+
+  @26
+objAlpha(76, intC[1])
+objScale(73, intC[2], intC[2])
+refresh
+goto_unless(!intC[0]) @27
+goto @28
+
+  @27
+goto @23
+
+  @28
+objDelete(76)
+strS[1001] = 'SIROB'
+intA[1000] = strcmp(strS[1001], 'NONE')
+goto_unless(!intA[1000]) @29
+strclear(strS[1001])
+
+  @29
+strS[1002] = 'NONE'
+intA[1000] = strcmp(strS[1002], 'NONE')
+goto_unless(!intA[1000]) @30
+strclear(strS[1002])
+
+  @30
+intF[1120] = 1
+intF[1116] = 0
+intF[1117] = 9
+strS[1003] = 'NONE'
+intA[1000] = strcmp(strS[1003], 'NONE')
+goto_unless(!intA[1000]) @31
+strclear(strS[1003])
+
+  @31
+intF[1112] = -1
+intF[1113] = -1
+intF[1114] = -1
+intF[1115] = -1
+farcall(9050, 0)
+intF[1120] = 0
+SET_WAIP_WINDOWCLOSE_OFF
+SET_GRPCOM_WINDOWCLOSE_OFF
+DrawAuto
+EnableSyscom
+rtl
+
+#entrypoint 012 // Z12
+
+HideSyscom
+DrawManual
+objClear(76)
+objOfFile(76, 'EV04_00')
+objMove(76, 70, 4)
+objPattNo(76, 0)
+objAlpha(76, 128)
+objRepOrigin(76, 320, 160)
+objDispRect(76, 80, 14, 640, 320)
+objShow(76, 1)
+objClear(77)
+objOfFile(77, 'SIROB')
+objMove(77, 80, 14)
+objPattNo(77, 0)
+objDispRect(77, 80, 14, 640, 320)
+objShow(77, 0)
+objRepOrigin(73, 320, 160)
+objShow(74, 0)
+objShow(75, 0)
+wait(200)
+FlushClick
+intC[0] = 160
+InitExFrames({0, 100, 250, intC[0]}, {1, 100, 240, intC[0]})
+
+  @32
+intC[0] = ReadExFrames({0, intC[1]}, {1, intC[2]})
+GetCursorPos(intA[1000], intA[1001], intA[1002], intA[1003])
+goto_unless(intA[1002] == 2) @33
+intF[1000] = 1
+FlushClick
+goto @34
+
+  @33
+intF[1000] = 0
+
+  @34
+goto_unless(intF[1000] == 1) @35
+intC[0] = 0
+intC[1] = 250
+intC[2] = 240
+
+  @35
+objScale(73, intC[1], intC[1])
+objScale(76, intC[2], intC[2])
+refresh
+goto_unless(!intC[0]) @36
+goto @37
+
+  @36
+goto @32
+
+  @37
+wavPlay('SE11', 0, 0)
+wait(180)
+objShow(77, 1)
+FlushClick
+intC[0] = 100
+InitExFrames({0, 0, 255, intC[0]})
+
+  @38
+intC[0] = ReadExFrames({0, intC[1]})
+GetCursorPos(intA[1000], intA[1001], intA[1002], intA[1003])
+goto_unless(intA[1002] == 2) @39
+intF[1000] = 1
+FlushClick
+goto @40
+
+  @39
+intF[1000] = 0
+
+  @40
+goto_unless(intF[1000] == 1) @41
+intC[0] = 0
+intC[1] = 255
+
+  @41
+objAlpha(77, intC[1])
+refresh
+goto_unless(!intC[0]) @42
+goto @43
+
+  @42
+goto @38
+
+  @43
+objDelete(76)
+objDelete(77)
+strS[1001] = 'SIROB'
+intA[1000] = strcmp(strS[1001], 'NONE')
+goto_unless(!intA[1000]) @44
+strclear(strS[1001])
+
+  @44
+strS[1002] = 'NONE'
+intA[1000] = strcmp(strS[1002], 'NONE')
+goto_unless(!intA[1000]) @45
+strclear(strS[1002])
+
+  @45
+intF[1120] = 1
+intF[1116] = 0
+intF[1117] = 9
+strS[1003] = 'NONE'
+intA[1000] = strcmp(strS[1003], 'NONE')
+goto_unless(!intA[1000]) @46
+strclear(strS[1003])
+
+  @46
+intF[1112] = -1
+intF[1113] = -1
+intF[1114] = -1
+intF[1115] = -1
+farcall(9050, 0)
+intF[1120] = 0
+SET_WAIP_WINDOWCLOSE_OFF
+SET_GRPCOM_WINDOWCLOSE_OFF
+DrawAuto
+EnableSyscom
+rtl
+
+  @47
+
+#entrypoint 019 // Z19
+
+strS[1000] = 'BG02'
+intA[1000] = strcmp(strS[1000], 'NONE')
+goto_unless(!intA[1000]) @48
+strclear(strS[1000])
+
+  @48
+intF[1120] = 1
+strS[1001] = 'EV04'
+intA[1000] = strcmp(strS[1001], 'NONE')
+goto_unless(!intA[1000]) @49
+strclear(strS[1001])
+
+  @49
+strS[1002] = 'NONE'
+intA[1000] = strcmp(strS[1002], 'NONE')
+goto_unless(!intA[1000]) @50
+strclear(strS[1002])
+
+  @50
+intF[1120] = 1
+intF[1116] = 0
+intF[1117] = 0
+strS[1003] = 'NONE'
+intA[1000] = strcmp(strS[1003], 'NONE')
+goto_unless(!intA[1000]) @51
+strclear(strS[1003])
+
+  @51
+intF[1112] = -1
+intF[1113] = -1
+intF[1114] = -1
+intF[1115] = -1
+farcall(9050, 0)
+intF[1120] = 0
+SET_WAIP_WINDOWCLOSE_OFF
+SET_GRPCOM_WINDOWCLOSE_OFF
+#res<0000>
+strS[1900] = 'Tôi nín th» và bóp cò'
+gosub @72
+goto_unless(intC[0]) @52
+gosub @86
+goto @53
+
+  @52
+page
+
+  @53
+intF[1133] += 1
+#res<0001>
+gosub @73
+wait(200)
+farcall(1003, 10)
+goto_unless(intC[0]) @54
+gosub @87
+goto @55
+
+  @54
+pause
+
+  @55
+strS[1000] = 'BG02'
+intA[1000] = strcmp(strS[1000], 'NONE')
+goto_unless(!intA[1000]) @56
+strclear(strS[1000])
+
+  @56
+intF[1120] = 1
+strS[1001] = 'EV04'
+intA[1000] = strcmp(strS[1001], 'NONE')
+goto_unless(!intA[1000]) @57
+strclear(strS[1001])
+
+  @57
+strS[1002] = 'NONE'
+intA[1000] = strcmp(strS[1002], 'NONE')
+goto_unless(!intA[1000]) @58
+strclear(strS[1002])
+
+  @58
+intF[1120] = 1
+intF[1116] = 0
+intF[1117] = 0
+strS[1003] = 'NONE'
+intA[1000] = strcmp(strS[1003], 'NONE')
+goto_unless(!intA[1000]) @59
+strclear(strS[1003])
+
+  @59
+intF[1112] = -1
+intF[1113] = -1
+intF[1114] = -1
+intF[1115] = -1
+farcall(9050, 0)
+intF[1120] = 0
+SET_WAIP_WINDOWCLOSE_OFF
+SET_GRPCOM_WINDOWCLOSE_OFF
+#res<0002>
+strS[1900] = 'Tôi nín th» và bóp cò'
+gosub @72
+goto_unless(intC[0]) @60
+gosub @86
+goto @61
+
+  @60
+page
+
+  @61
+intF[1133] += 1
+#res<0003>
+gosub @73
+wait(200)
+farcall(1003, 11)
+goto_unless(intC[0]) @62
+gosub @87
+goto @63
+
+  @62
+pause
+
+  @63
+strS[1000] = 'BG02'
+intA[1000] = strcmp(strS[1000], 'NONE')
+goto_unless(!intA[1000]) @64
+strclear(strS[1000])
+
+  @64
+intF[1120] = 1
+strS[1001] = 'EV04'
+intA[1000] = strcmp(strS[1001], 'NONE')
+goto_unless(!intA[1000]) @65
+strclear(strS[1001])
+
+  @65
+strS[1002] = 'NONE'
+intA[1000] = strcmp(strS[1002], 'NONE')
+goto_unless(!intA[1000]) @66
+strclear(strS[1002])
+
+  @66
+intF[1120] = 1
+intF[1116] = 0
+intF[1117] = 0
+strS[1003] = 'NONE'
+intA[1000] = strcmp(strS[1003], 'NONE')
+goto_unless(!intA[1000]) @67
+strclear(strS[1003])
+
+  @67
+intF[1112] = -1
+intF[1113] = -1
+intF[1114] = -1
+intF[1115] = -1
+farcall(9050, 0)
+intF[1120] = 0
+SET_WAIP_WINDOWCLOSE_OFF
+SET_GRPCOM_WINDOWCLOSE_OFF
+#res<0004>
+strS[1900] = 'Tôi nín th» và bóp cò '
+gosub @72
+goto_unless(intC[0]) @68
+gosub @86
+goto @69
+
+  @68
+page
+
+  @69
+intF[1133] += 1
+#res<0005>
+gosub @73
+wait(200)
+farcall(1003, 12)
+goto_unless(intC[0]) @70
+gosub @87
+goto @71
+
+  @70
+pause
+
+  @71
+goto @47
+ret
+halt
+CallDLL(0, 10, intC[1] | 1179648)
+goto @73
+
+  @72
+CallDLL(0, 10, 1181548)
+
+  @73
+DisableAutoSavepoints
+store = 8
+strS[1900] = '        '
+
+  @74
+goto_unless(store < 512) @75
+strS[1900] += strS[1900]
+store *= 2
+goto @74
+
+  @75
+CallDLL(0, 12, 1181548, 131073)
+goto_on(store){  @84, @85, @83, @76, @77, @80, @81, @82 }
+goto @85
+
+  @76
+br
+goto @75
+
+  @77
+goto_unless(intC[0]) @78
+gosub @86
+goto @79
+
+  @78
+page
+
+  @79
+TextPos(0, 0)
+CallDLL(0, 13, 1181548)
+goto @75
+
+  @80
+SetIndent
+goto @75
+
+  @81
+ClearIndent
+goto @75
+
+  @82
+FontColour(6)
+CallDLL(0, 21)
+intC[0] += 1
+
+  @83
+#res<0006>
+goto @75
+
+  @84
+strS[1901] = strS[1900]
+strS[1900] = 'Error: '
+strS[1900] += strS[1901]
+strS[1900] += '. Unable to format text.'
+strclear(strS[1901])
+FastText
+#res<0007>
+NormalText
+
+  @85
+EnableAutoSavepoints
+ret
+goto @75
+intC[1] = 0
+goto @88
+
+  @86
+intC[1] = 1
+goto @88
+
+  @87
+intC[1] = 2
+
+  @88
+store = 8
+strS[1901] = '        '
+
+  @89
+goto_unless(store < 2048) @90
+strS[1901] += strS[1901]
+store *= 2
+goto @89
+
+  @90
+FlushClick
+spause
+GetCursorPos(intC[3], intC[4], intC[2], store)
+goto_if(intC[2] != 2) @91
+GetWakuAll
+CallDLL(0, 23, intC[3], intC[4], 1181549, store)
+goto_if(!store) @91
+CallDLL(0, 105, 1181549, 1)
+goto @90
+
+  @91
+strclear(strS[1901])
+goto_on(intC[1]){  @94, @93, @92 }
+goto @94
+
+  @92
+CallDLL(0, 104, -1)
+goto_unless(store) @93
+#res<0008>
+strS[1900] = ''
+gosub @72
+goto @94
+
+  @93
+intC[0] = 0
+msgClear
+CallDLL(0, 20)
+
+  @94
+store = 1
+ret
+eof

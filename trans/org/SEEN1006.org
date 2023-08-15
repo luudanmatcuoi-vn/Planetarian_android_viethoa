@@ -1,0 +1,1209 @@
+{-# cp utf-8 #- Disassembled with Kprl 1.45 -}
+
+#file 'SEEN1006.TXT'
+
+#kidoku_type 2
+
+  @1
+FlushClick
+intC[0] = intA[100]
+InitExFrames({0, intA[101], intA[102], intC[0]})
+
+  @2
+intC[0] = ReadExFrames({0, intC[1]})
+GetCursorPos(intA[1000], intA[1001], intA[1002], intA[1003])
+goto_unless(intA[1002] == 2) @3
+intF[1000] = 1
+FlushClick
+goto @4
+
+  @3
+intF[1000] = 0
+
+  @4
+goto_unless(intF[1000] == 1) @5
+intC[0] = 0
+intC[1] = intA[102]
+
+  @5
+objAlpha(73, intC[1])
+gosub @8
+refresh
+goto_unless(!intC[0]) @6
+goto @7
+
+  @6
+goto @2
+
+  @7
+
+  @8
+intA[0] = ExTimer(0)
+goto_unless(30 <= intA[0]) @9
+ResetExTimer(0)
+strS[0] = 'SN_S'
+strS[1] = itoa(intA[203], 3)
+strS[0] += strS[1]
+objOfFile(75, strS[0])
+objMove(75, intA[200], intA[201])
+objPattNo(75, 0)
+objComposite(75, 1)
+objShow(75, 1)
+intA[203] += 1
+goto_unless(120 <= intA[203]) @9
+intA[203] = 0
+
+  @9
+objAlpha(74, intA[202])
+objAlpha(75, intA[202])
+ret
+
+  @10
+FlushClick
+intC[0] = intA[204]
+InitExFrames({0, intA[205], intA[206], intC[0]})
+
+  @11
+intC[0] = ReadExFrames({0, intC[1]})
+GetCursorPos(intA[1000], intA[1001], intA[1002], intA[1003])
+goto_unless(intA[1002] == 2) @12
+intF[1000] = 1
+FlushClick
+goto @13
+
+  @12
+intF[1000] = 0
+
+  @13
+goto_unless(intF[1000] == 1) @14
+intC[0] = 0
+intC[1] = intA[206]
+
+  @14
+intA[202] = intC[1]
+gosub @8
+refresh
+goto_unless(!intC[0]) @15
+goto @16
+
+  @15
+goto @11
+
+  @16
+ret
+
+  @17
+FlushClick
+intC[0] = intA[302]
+InitExFrames({0, intA[303], intA[304], intC[0]})
+
+  @18
+intC[0] = ReadExFrames({0, intC[1]})
+GetCursorPos(intA[1000], intA[1001], intA[1002], intA[1003])
+goto_unless(intA[1002] == 2) @19
+intF[1000] = 1
+FlushClick
+goto @20
+
+  @19
+intF[1000] = 0
+
+  @20
+goto_unless(intF[1000] == 1) @21
+intC[0] = 0
+intC[1] = intA[304]
+
+  @21
+objAlpha(76, intC[1])
+refresh
+goto_unless(!intC[0]) @22
+goto @23
+
+  @22
+goto @18
+
+  @23
+ret
+
+#entrypoint 000 // Z00
+
+HideSyscom
+HideCursor
+DrawManual
+waitC(500)
+bgmPlay('BGM09')
+waitC(3500)
+intA[400] = (800 - 320) / 2
+intA[401] = 80
+objClear(76)
+objOfFile(76, 'ED00')
+objMove(76, intA[400], intA[401])
+objPattNo(76, 0)
+objShow(76, 1)
+intA[302] = 2000
+intA[303] = 0
+intA[304] = 255
+gosub @17
+intA[100] = 2000
+intA[101] = OBJFRONTGET_TR(73)
+intA[102] = OBJFRONTGET_TR(73)
+goto_unless(!intA[102]) @24
+intA[102] = 1
+goto @27
+
+  @24
+goto_unless(intA[102] == 1) @25
+intA[102] = 0
+goto @27
+
+  @25
+goto_unless(intA[102] == 255) @26
+intA[102] = 254
+goto @27
+
+  @26
+goto_unless(intA[102] == 254) @27
+intA[102] = 255
+
+  @27
+gosub @1
+intA[400] = (800 - 260) / 2
+intA[401] = 350
+objClear(73)
+objOfFile(73, 'ED01')
+objMove(73, intA[400], intA[401])
+objPattNo(73, 0)
+objShow(73, 1)
+intA[100] = 2000
+intA[101] = 0
+intA[102] = 255
+gosub @1
+intA[100] = 3800
+intA[101] = OBJFRONTGET_TR(73)
+intA[102] = OBJFRONTGET_TR(73)
+goto_unless(!intA[102]) @28
+intA[102] = 1
+goto @31
+
+  @28
+goto_unless(intA[102] == 1) @29
+intA[102] = 0
+goto @31
+
+  @29
+goto_unless(intA[102] == 255) @30
+intA[102] = 254
+goto @31
+
+  @30
+goto_unless(intA[102] == 254) @31
+intA[102] = 255
+
+  @31
+gosub @1
+intA[100] = 2000
+intA[101] = 255
+intA[102] = 0
+gosub @1
+objDelete(73)
+intA[100] = 400
+intA[101] = OBJFRONTGET_TR(73)
+intA[102] = OBJFRONTGET_TR(73)
+goto_unless(!intA[102]) @32
+intA[102] = 1
+goto @35
+
+  @32
+goto_unless(intA[102] == 1) @33
+intA[102] = 0
+goto @35
+
+  @33
+goto_unless(intA[102] == 255) @34
+intA[102] = 254
+goto @35
+
+  @34
+goto_unless(intA[102] == 254) @35
+intA[102] = 255
+
+  @35
+gosub @1
+objClear(73)
+objOfFile(73, 'ED02')
+objMove(73, intA[400], intA[401])
+objPattNo(73, 0)
+objShow(73, 1)
+intA[100] = 1500
+intA[101] = 0
+intA[102] = 255
+gosub @1
+intA[100] = 3700
+intA[101] = OBJFRONTGET_TR(73)
+intA[102] = OBJFRONTGET_TR(73)
+goto_unless(!intA[102]) @36
+intA[102] = 1
+goto @39
+
+  @36
+goto_unless(intA[102] == 1) @37
+intA[102] = 0
+goto @39
+
+  @37
+goto_unless(intA[102] == 255) @38
+intA[102] = 254
+goto @39
+
+  @38
+goto_unless(intA[102] == 254) @39
+intA[102] = 255
+
+  @39
+gosub @1
+intA[100] = 1500
+intA[101] = 255
+intA[102] = 0
+gosub @1
+objDelete(73)
+intA[100] = 500
+intA[101] = OBJFRONTGET_TR(73)
+intA[102] = OBJFRONTGET_TR(73)
+goto_unless(!intA[102]) @40
+intA[102] = 1
+goto @43
+
+  @40
+goto_unless(intA[102] == 1) @41
+intA[102] = 0
+goto @43
+
+  @41
+goto_unless(intA[102] == 255) @42
+intA[102] = 254
+goto @43
+
+  @42
+goto_unless(intA[102] == 254) @43
+intA[102] = 255
+
+  @43
+gosub @1
+objClear(73)
+objOfFile(73, 'ED03')
+objMove(73, intA[400], intA[401])
+objPattNo(73, 0)
+objShow(73, 1)
+intA[100] = 1500
+intA[101] = 0
+intA[102] = 255
+gosub @1
+intA[100] = 3700
+intA[101] = OBJFRONTGET_TR(73)
+intA[102] = OBJFRONTGET_TR(73)
+goto_unless(!intA[102]) @44
+intA[102] = 1
+goto @47
+
+  @44
+goto_unless(intA[102] == 1) @45
+intA[102] = 0
+goto @47
+
+  @45
+goto_unless(intA[102] == 255) @46
+intA[102] = 254
+goto @47
+
+  @46
+goto_unless(intA[102] == 254) @47
+intA[102] = 255
+
+  @47
+gosub @1
+intA[100] = 1500
+intA[101] = 255
+intA[102] = 0
+gosub @1
+objDelete(73)
+intA[100] = 500
+intA[101] = OBJFRONTGET_TR(73)
+intA[102] = OBJFRONTGET_TR(73)
+goto_unless(!intA[102]) @48
+intA[102] = 1
+goto @51
+
+  @48
+goto_unless(intA[102] == 1) @49
+intA[102] = 0
+goto @51
+
+  @49
+goto_unless(intA[102] == 255) @50
+intA[102] = 254
+goto @51
+
+  @50
+goto_unless(intA[102] == 254) @51
+intA[102] = 255
+
+  @51
+gosub @1
+objClear(73)
+objOfFile(73, 'ED04')
+objMove(73, intA[400], intA[401])
+objPattNo(73, 0)
+objShow(73, 1)
+intA[100] = 1500
+intA[101] = 0
+intA[102] = 255
+gosub @1
+intA[100] = 3700
+intA[101] = OBJFRONTGET_TR(73)
+intA[102] = OBJFRONTGET_TR(73)
+goto_unless(!intA[102]) @52
+intA[102] = 1
+goto @55
+
+  @52
+goto_unless(intA[102] == 1) @53
+intA[102] = 0
+goto @55
+
+  @53
+goto_unless(intA[102] == 255) @54
+intA[102] = 254
+goto @55
+
+  @54
+goto_unless(intA[102] == 254) @55
+intA[102] = 255
+
+  @55
+gosub @1
+intA[100] = 1500
+intA[101] = 255
+intA[102] = 0
+gosub @1
+objDelete(73)
+intA[100] = 500
+intA[101] = OBJFRONTGET_TR(73)
+intA[102] = OBJFRONTGET_TR(73)
+goto_unless(!intA[102]) @56
+intA[102] = 1
+goto @59
+
+  @56
+goto_unless(intA[102] == 1) @57
+intA[102] = 0
+goto @59
+
+  @57
+goto_unless(intA[102] == 255) @58
+intA[102] = 254
+goto @59
+
+  @58
+goto_unless(intA[102] == 254) @59
+intA[102] = 255
+
+  @59
+gosub @1
+objClear(73)
+objOfFile(73, 'ED05')
+objMove(73, intA[400], intA[401])
+objPattNo(73, 0)
+objShow(73, 1)
+intA[100] = 1500
+intA[101] = 0
+intA[102] = 255
+gosub @1
+intA[100] = 3700
+intA[101] = OBJFRONTGET_TR(73)
+intA[102] = OBJFRONTGET_TR(73)
+goto_unless(!intA[102]) @60
+intA[102] = 1
+goto @63
+
+  @60
+goto_unless(intA[102] == 1) @61
+intA[102] = 0
+goto @63
+
+  @61
+goto_unless(intA[102] == 255) @62
+intA[102] = 254
+goto @63
+
+  @62
+goto_unless(intA[102] == 254) @63
+intA[102] = 255
+
+  @63
+gosub @1
+intA[100] = 1500
+intA[101] = 255
+intA[102] = 0
+gosub @1
+objDelete(73)
+intA[100] = 500
+intA[101] = OBJFRONTGET_TR(73)
+intA[102] = OBJFRONTGET_TR(73)
+goto_unless(!intA[102]) @64
+intA[102] = 1
+goto @67
+
+  @64
+goto_unless(intA[102] == 1) @65
+intA[102] = 0
+goto @67
+
+  @65
+goto_unless(intA[102] == 255) @66
+intA[102] = 254
+goto @67
+
+  @66
+goto_unless(intA[102] == 254) @67
+intA[102] = 255
+
+  @67
+gosub @1
+objClear(73)
+objOfFile(73, 'ED13')
+objMove(73, intA[400], intA[401])
+objPattNo(73, 0)
+objShow(73, 1)
+intA[100] = 1500
+intA[101] = 0
+intA[102] = 255
+gosub @1
+intA[100] = 3700
+intA[101] = OBJFRONTGET_TR(73)
+intA[102] = OBJFRONTGET_TR(73)
+goto_unless(!intA[102]) @68
+intA[102] = 1
+goto @71
+
+  @68
+goto_unless(intA[102] == 1) @69
+intA[102] = 0
+goto @71
+
+  @69
+goto_unless(intA[102] == 255) @70
+intA[102] = 254
+goto @71
+
+  @70
+goto_unless(intA[102] == 254) @71
+intA[102] = 255
+
+  @71
+gosub @1
+intA[100] = 1500
+intA[101] = 255
+intA[102] = 0
+gosub @1
+objDelete(73)
+intA[100] = 500
+intA[101] = OBJFRONTGET_TR(73)
+intA[102] = OBJFRONTGET_TR(73)
+goto_unless(!intA[102]) @72
+intA[102] = 1
+goto @75
+
+  @72
+goto_unless(intA[102] == 1) @73
+intA[102] = 0
+goto @75
+
+  @73
+goto_unless(intA[102] == 255) @74
+intA[102] = 254
+goto @75
+
+  @74
+goto_unless(intA[102] == 254) @75
+intA[102] = 255
+
+  @75
+gosub @1
+intA[302] = 2000
+intA[303] = 255
+intA[304] = 0
+gosub @17
+objDelete(76)
+intA[100] = 2000
+intA[101] = OBJFRONTGET_TR(73)
+intA[102] = OBJFRONTGET_TR(73)
+goto_unless(!intA[102]) @76
+intA[102] = 1
+goto @79
+
+  @76
+goto_unless(intA[102] == 1) @77
+intA[102] = 0
+goto @79
+
+  @77
+goto_unless(intA[102] == 255) @78
+intA[102] = 254
+goto @79
+
+  @78
+goto_unless(intA[102] == 254) @79
+intA[102] = 255
+
+  @79
+gosub @1
+intA[400] = (800 - 320) / 2
+intA[401] = 80
+objClear(74)
+objClear(75)
+objOfFile(74, 'SN_B00')
+objMove(74, intA[400], intA[401])
+objPattNo(74, 0)
+objShow(74, 1)
+intA[200] = intA[400]
+intA[201] = intA[401]
+intA[203] = 72
+ResetExTimer(0)
+intA[204] = 4000
+intA[205] = 0
+intA[206] = 255
+gosub @10
+intA[400] = (800 - 260) / 2
+intA[401] = 350
+objClear(73)
+objOfFile(73, 'ED06')
+objMove(73, intA[400], intA[401])
+objPattNo(73, 0)
+objShow(73, 1)
+intA[100] = 1500
+intA[101] = 0
+intA[102] = 255
+gosub @1
+intA[100] = 3700
+intA[101] = OBJFRONTGET_TR(73)
+intA[102] = OBJFRONTGET_TR(73)
+goto_unless(!intA[102]) @80
+intA[102] = 1
+goto @83
+
+  @80
+goto_unless(intA[102] == 1) @81
+intA[102] = 0
+goto @83
+
+  @81
+goto_unless(intA[102] == 255) @82
+intA[102] = 254
+goto @83
+
+  @82
+goto_unless(intA[102] == 254) @83
+intA[102] = 255
+
+  @83
+gosub @1
+intA[100] = 1500
+intA[101] = 255
+intA[102] = 0
+gosub @1
+objDelete(73)
+intA[100] = 500
+intA[101] = OBJFRONTGET_TR(73)
+intA[102] = OBJFRONTGET_TR(73)
+goto_unless(!intA[102]) @84
+intA[102] = 1
+goto @87
+
+  @84
+goto_unless(intA[102] == 1) @85
+intA[102] = 0
+goto @87
+
+  @85
+goto_unless(intA[102] == 255) @86
+intA[102] = 254
+goto @87
+
+  @86
+goto_unless(intA[102] == 254) @87
+intA[102] = 255
+
+  @87
+gosub @1
+objClear(73)
+objOfFile(73, 'ED07')
+objMove(73, intA[400], intA[401])
+objPattNo(73, 0)
+objShow(73, 1)
+intA[100] = 1500
+intA[101] = 0
+intA[102] = 255
+gosub @1
+intA[100] = 3700
+intA[101] = OBJFRONTGET_TR(73)
+intA[102] = OBJFRONTGET_TR(73)
+goto_unless(!intA[102]) @88
+intA[102] = 1
+goto @91
+
+  @88
+goto_unless(intA[102] == 1) @89
+intA[102] = 0
+goto @91
+
+  @89
+goto_unless(intA[102] == 255) @90
+intA[102] = 254
+goto @91
+
+  @90
+goto_unless(intA[102] == 254) @91
+intA[102] = 255
+
+  @91
+gosub @1
+intA[100] = 1500
+intA[101] = 255
+intA[102] = 0
+gosub @1
+objDelete(73)
+intA[100] = 500
+intA[101] = OBJFRONTGET_TR(73)
+intA[102] = OBJFRONTGET_TR(73)
+goto_unless(!intA[102]) @92
+intA[102] = 1
+goto @95
+
+  @92
+goto_unless(intA[102] == 1) @93
+intA[102] = 0
+goto @95
+
+  @93
+goto_unless(intA[102] == 255) @94
+intA[102] = 254
+goto @95
+
+  @94
+goto_unless(intA[102] == 254) @95
+intA[102] = 255
+
+  @95
+gosub @1
+objClear(73)
+objOfFile(73, 'ED08')
+objMove(73, intA[400], intA[401])
+objPattNo(73, 0)
+objShow(73, 1)
+intA[100] = 1500
+intA[101] = 0
+intA[102] = 255
+gosub @1
+intA[100] = 3700
+intA[101] = OBJFRONTGET_TR(73)
+intA[102] = OBJFRONTGET_TR(73)
+goto_unless(!intA[102]) @96
+intA[102] = 1
+goto @99
+
+  @96
+goto_unless(intA[102] == 1) @97
+intA[102] = 0
+goto @99
+
+  @97
+goto_unless(intA[102] == 255) @98
+intA[102] = 254
+goto @99
+
+  @98
+goto_unless(intA[102] == 254) @99
+intA[102] = 255
+
+  @99
+gosub @1
+intA[100] = 1500
+intA[101] = 255
+intA[102] = 0
+gosub @1
+objDelete(73)
+intA[100] = 500
+intA[101] = OBJFRONTGET_TR(73)
+intA[102] = OBJFRONTGET_TR(73)
+goto_unless(!intA[102]) @100
+intA[102] = 1
+goto @103
+
+  @100
+goto_unless(intA[102] == 1) @101
+intA[102] = 0
+goto @103
+
+  @101
+goto_unless(intA[102] == 255) @102
+intA[102] = 254
+goto @103
+
+  @102
+goto_unless(intA[102] == 254) @103
+intA[102] = 255
+
+  @103
+gosub @1
+objClear(73)
+objOfFile(73, 'ED09')
+objMove(73, intA[400], intA[401])
+objPattNo(73, 0)
+objShow(73, 1)
+intA[100] = 1500
+intA[101] = 0
+intA[102] = 255
+gosub @1
+intA[100] = 3700
+intA[101] = OBJFRONTGET_TR(73)
+intA[102] = OBJFRONTGET_TR(73)
+goto_unless(!intA[102]) @104
+intA[102] = 1
+goto @107
+
+  @104
+goto_unless(intA[102] == 1) @105
+intA[102] = 0
+goto @107
+
+  @105
+goto_unless(intA[102] == 255) @106
+intA[102] = 254
+goto @107
+
+  @106
+goto_unless(intA[102] == 254) @107
+intA[102] = 255
+
+  @107
+gosub @1
+intA[100] = 1500
+intA[101] = 255
+intA[102] = 0
+gosub @1
+objDelete(73)
+intA[100] = 500
+intA[101] = OBJFRONTGET_TR(73)
+intA[102] = OBJFRONTGET_TR(73)
+goto_unless(!intA[102]) @108
+intA[102] = 1
+goto @111
+
+  @108
+goto_unless(intA[102] == 1) @109
+intA[102] = 0
+goto @111
+
+  @109
+goto_unless(intA[102] == 255) @110
+intA[102] = 254
+goto @111
+
+  @110
+goto_unless(intA[102] == 254) @111
+intA[102] = 255
+
+  @111
+gosub @1
+objClear(73)
+objOfFile(73, 'ED14')
+objMove(73, intA[400], intA[401])
+objPattNo(73, 0)
+objShow(73, 1)
+intA[100] = 1500
+intA[101] = 0
+intA[102] = 255
+gosub @1
+intA[100] = 3700
+intA[101] = OBJFRONTGET_TR(73)
+intA[102] = OBJFRONTGET_TR(73)
+goto_unless(!intA[102]) @112
+intA[102] = 1
+goto @115
+
+  @112
+goto_unless(intA[102] == 1) @113
+intA[102] = 0
+goto @115
+
+  @113
+goto_unless(intA[102] == 255) @114
+intA[102] = 254
+goto @115
+
+  @114
+goto_unless(intA[102] == 254) @115
+intA[102] = 255
+
+  @115
+gosub @1
+intA[100] = 1500
+intA[101] = 255
+intA[102] = 0
+gosub @1
+objDelete(73)
+intA[100] = 500
+intA[101] = OBJFRONTGET_TR(73)
+intA[102] = OBJFRONTGET_TR(73)
+goto_unless(!intA[102]) @116
+intA[102] = 1
+goto @119
+
+  @116
+goto_unless(intA[102] == 1) @117
+intA[102] = 0
+goto @119
+
+  @117
+goto_unless(intA[102] == 255) @118
+intA[102] = 254
+goto @119
+
+  @118
+goto_unless(intA[102] == 254) @119
+intA[102] = 255
+
+  @119
+gosub @1
+objClear(73)
+objOfFile(73, 'ED10')
+objMove(73, intA[400], intA[401])
+objPattNo(73, 0)
+objShow(73, 1)
+intA[100] = 1500
+intA[101] = 0
+intA[102] = 255
+gosub @1
+intA[100] = 3700
+intA[101] = OBJFRONTGET_TR(73)
+intA[102] = OBJFRONTGET_TR(73)
+goto_unless(!intA[102]) @120
+intA[102] = 1
+goto @123
+
+  @120
+goto_unless(intA[102] == 1) @121
+intA[102] = 0
+goto @123
+
+  @121
+goto_unless(intA[102] == 255) @122
+intA[102] = 254
+goto @123
+
+  @122
+goto_unless(intA[102] == 254) @123
+intA[102] = 255
+
+  @123
+gosub @1
+intA[100] = 1500
+intA[101] = 255
+intA[102] = 0
+gosub @1
+objDelete(73)
+intA[100] = 500
+intA[101] = OBJFRONTGET_TR(73)
+intA[102] = OBJFRONTGET_TR(73)
+goto_unless(!intA[102]) @124
+intA[102] = 1
+goto @127
+
+  @124
+goto_unless(intA[102] == 1) @125
+intA[102] = 0
+goto @127
+
+  @125
+goto_unless(intA[102] == 255) @126
+intA[102] = 254
+goto @127
+
+  @126
+goto_unless(intA[102] == 254) @127
+intA[102] = 255
+
+  @127
+gosub @1
+objClear(73)
+objOfFile(73, 'ED11')
+objMove(73, intA[400], intA[401])
+objPattNo(73, 0)
+objShow(73, 1)
+intA[100] = 1500
+intA[101] = 0
+intA[102] = 255
+gosub @1
+intA[100] = 3700
+intA[101] = OBJFRONTGET_TR(73)
+intA[102] = OBJFRONTGET_TR(73)
+goto_unless(!intA[102]) @128
+intA[102] = 1
+goto @131
+
+  @128
+goto_unless(intA[102] == 1) @129
+intA[102] = 0
+goto @131
+
+  @129
+goto_unless(intA[102] == 255) @130
+intA[102] = 254
+goto @131
+
+  @130
+goto_unless(intA[102] == 254) @131
+intA[102] = 255
+
+  @131
+gosub @1
+intA[100] = 1500
+intA[101] = 255
+intA[102] = 0
+gosub @1
+objDelete(73)
+intA[100] = 500
+intA[101] = OBJFRONTGET_TR(73)
+intA[102] = OBJFRONTGET_TR(73)
+goto_unless(!intA[102]) @132
+intA[102] = 1
+goto @135
+
+  @132
+goto_unless(intA[102] == 1) @133
+intA[102] = 0
+goto @135
+
+  @133
+goto_unless(intA[102] == 255) @134
+intA[102] = 254
+goto @135
+
+  @134
+goto_unless(intA[102] == 254) @135
+intA[102] = 255
+
+  @135
+gosub @1
+objClear(73)
+objOfFile(73, 'ED12')
+objMove(73, intA[400], intA[401])
+objPattNo(73, 0)
+objShow(73, 1)
+intA[100] = 1500
+intA[101] = 0
+intA[102] = 255
+gosub @1
+intA[100] = 3700
+intA[101] = OBJFRONTGET_TR(73)
+intA[102] = OBJFRONTGET_TR(73)
+goto_unless(!intA[102]) @136
+intA[102] = 1
+goto @139
+
+  @136
+goto_unless(intA[102] == 1) @137
+intA[102] = 0
+goto @139
+
+  @137
+goto_unless(intA[102] == 255) @138
+intA[102] = 254
+goto @139
+
+  @138
+goto_unless(intA[102] == 254) @139
+intA[102] = 255
+
+  @139
+gosub @1
+intA[100] = 1500
+intA[101] = 255
+intA[102] = 0
+gosub @1
+objDelete(73)
+intA[100] = 500
+intA[101] = OBJFRONTGET_TR(73)
+intA[102] = OBJFRONTGET_TR(73)
+goto_unless(!intA[102]) @140
+intA[102] = 1
+goto @143
+
+  @140
+goto_unless(intA[102] == 1) @141
+intA[102] = 0
+goto @143
+
+  @141
+goto_unless(intA[102] == 255) @142
+intA[102] = 254
+goto @143
+
+  @142
+goto_unless(intA[102] == 254) @143
+intA[102] = 255
+
+  @143
+gosub @1
+intA[204] = 3000
+intA[205] = 255
+intA[206] = 0
+gosub @10
+objDelete(74)
+objDelete(75)
+objClear(73)
+objClear(74)
+objClear(75)
+objClear(76)
+objClear(77)
+objOfFile(73, 'EV09S_00')
+objDriftOfFile(74, 'EV09S_01')
+objDriftOfFile(75, 'EV09S_02')
+objDriftOfFile(76, 'EV09S_03')
+objDriftOfFile(77, 'EV09S_01')
+objMove(73, 200, 80)
+objMove(74, 200, 80)
+objMove(75, 200, 80)
+objMove(76, 200, 80)
+objMove(77, 200, 80)
+objDispRect(74, 200, 80, 400, 300)
+objDispRect(75, 200, 80, 400, 300)
+objDispRect(76, 200, 80, 400, 300)
+objDispRect(77, 200, 80, 400, 300)
+objDriftOpts(74, 9, 0, 0, 0, 0, 3000 * 2, 8000 * 2, 800, 2, 3, 3500 * 2, 0, 0, 399, 299)
+objDriftOpts(75, 6, 0, 0, 0, 0, 2200 * 2, 8000 * 2, 800, 2, 2, 2700 * 2, 0, 0, 399, 299)
+objDriftOpts(76, 1, 0, 0, 0, 0, 2000 * 2, 8000 * 2, 800, 2, 2, 3000 * 2, 0, 0, 399, 299)
+objDriftOpts(77, 2, 0, 0, 0, 0, 2200 * 2, 8000 * 2, 800, 2, 2, 3200 * 2, 0, 0, 399, 299)
+objPattNo(73, 0)
+objPattNo(74, 0)
+objPattNo(75, 0)
+objPattNo(76, 0)
+objPattNo(77, 0)
+objShow(73, 1)
+objShow(74, 1)
+objShow(75, 1)
+objShow(76, 1)
+objShow(77, 1)
+FlushClick
+intC[0] = 6000
+InitExFrames({0, 0, 255, intC[0]})
+
+  @144
+intC[0] = ReadExFrames({0, intC[1]})
+GetCursorPos(intA[1000], intA[1001], intA[1002], intA[1003])
+goto_unless(intA[1002] == 2) @145
+intF[1000] = 1
+FlushClick
+goto @146
+
+  @145
+intF[1000] = 0
+
+  @146
+goto_unless(intF[1000] == 1) @147
+intC[0] = 0
+intC[1] = 255
+
+  @147
+objAlpha(73, intC[1])
+objAlpha(74, intC[1])
+objAlpha(75, intC[1])
+objAlpha(76, intC[1])
+objAlpha(77, intC[1])
+refresh
+goto_unless(!intC[0]) @148
+goto @149
+
+  @148
+goto @144
+
+  @149
+recFill(0, 0, 800, 600, 0, 0, 0, 0)
+FlushClick
+intC[0] = 10000
+InitExFrames({0, 0, 255, intC[0]})
+
+  @150
+intC[0] = ReadExFrames({0, intC[1]})
+GetCursorPos(intA[1000], intA[1001], intA[1002], intA[1003])
+goto_unless(intA[1002] == 2) @151
+intF[1000] = 1
+FlushClick
+goto @152
+
+  @151
+intF[1000] = 0
+
+  @152
+goto_unless(intF[1000] == 1) @153
+intC[0] = 0
+intC[1] = 255
+
+  @153
+refresh
+goto_unless(!intC[0]) @154
+goto @155
+
+  @154
+goto @150
+
+  @155
+bgmFadeOut(10000)
+objOfFile(78, 'SIROS')
+objMove(78, 0, 0)
+objPattNo(78, 0)
+objShow(78, 1)
+FlushClick
+intC[0] = 5000
+InitExFrames({0, 0, 255, intC[0]})
+
+  @156
+intC[0] = ReadExFrames({0, intC[1]})
+GetCursorPos(intA[1000], intA[1001], intA[1002], intA[1003])
+goto_unless(intA[1002] == 2) @157
+intF[1000] = 1
+FlushClick
+goto @158
+
+  @157
+intF[1000] = 0
+
+  @158
+goto_unless(intF[1000] == 1) @159
+intC[0] = 0
+intC[1] = 255
+
+  @159
+objAlpha(78, intC[1])
+refresh
+goto_unless(!intC[0]) @160
+goto @161
+
+  @160
+goto @156
+
+  @161
+recFill(0, 0, 800, 600, 0, 255, 255, 255)
+objDelete(73)
+objDelete(74)
+objDelete(75)
+objDelete(76)
+objDelete(77)
+objDelete(78)
+waitC(7000)
+DrawAuto
+ShowCursor
+EnableSyscom
+rtl
+eof
+halt

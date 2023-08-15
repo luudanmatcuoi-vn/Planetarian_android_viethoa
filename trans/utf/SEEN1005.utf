@@ -1,0 +1,15 @@
+// Resources for SEEN1005.TXT
+
+#character 'ゆめみ'
+
+<0000> "\posx{10}B\posx{20}Ε\posx{30}n\posx{40} \posx{50}n\posx{60}g\posx{70}h\posx{80}ι\posx{90} \posx{100}t\posx{110}h\posx{120}α\posx{130} \posx{140}n\posx{150}Β\posx{160}o\posx{170}.\posx{180}.\posx{190}.\posx{200} \posx{210}v\posx{220}β\posx{230} \posx{240}c\posx{250}u\posx{260}n\posx{270}g\posx{280} \posx{290}t\posx{300}h\posx{310}i\posx{320}Ω\posx{330}n\posx{340} \posx{350}v\posx{360}Ζ\posx{370}n\posx{380}?\posx{390}"\posx{400}
+
+<0001> "\posx{10}B\posx{20}Ν\posx{30}t\posx{40} \posx{50}k\posx{60}γ\posx{70} \posx{80}l\posx{90}Г\posx{100}c\posx{110} \posx{120}n\posx{130}Β\posx{140}o\posx{150} \posx{160}b\posx{170}Ε\posx{180}n\posx{190} \posx{200}c\posx{210}Ё\posx{220}n\posx{230}g\posx{240} \posx{250}Σ\posx{260}З\posx{270}В\posx{280}c\posx{290} \posx{300}n\posx{310}g\posx{320}Η\posx{330}m\posx{340} \posx{350}n\posx{360}h\posx{370}η\posx{380}n\posx{390}.\posx{400}.\posx{410}.\posx{420} \posx{430}n\posx{440}h\posx{450}Л\posx{460}n\posx{470}g\posx{480} \posx{490}Σ\posx{500}i\posx{510}β\posx{520}u\posx{530} \posx{540}t\posx{550}u\posx{560}y\posx{570}ε\posx{580}t\posx{590} \posx{600}v\posx{610}ω\posx{620}i\posx{630},\posx{640}\ns\posx{10}Α\posx{20}n\posx{30}g\posx{40}.\posx{50}.\posx{60}.\posx{70} \posx{80}l\posx{90}Ν\posx{100}p\posx{110} \posx{120}l\posx{130}Α\posx{140}n\posx{150}h\posx{160}.\posx{170}.\posx{180}.\posx{190} \posx{200}t\posx{210}З\posx{220}А\posx{230}n\posx{240}g\posx{250} \posx{260}n\posx{270}h\posx{280}З\posx{290} \posx{300}v\posx{310}π\posx{320} \posx{330}t\posx{340}Ρ\posx{350}n\posx{360}.\posx{370}"\posx{380}
+
+<0002> "\posx{10}V\posx{20}π\posx{30} \posx{40}v\posx{50}Β\posx{60}n\posx{70} \posx{80}n\posx{90}h\posx{100}Л\posx{110}n\posx{120}g\posx{130} \posx{140}v\posx{150}η\posx{160} \posx{170}s\posx{180}a\posx{190}o\posx{200}.\posx{210}.\posx{220}.\posx{230} \posx{240}t\posx{250}r\posx{260}o\posx{270}n\posx{280}g\posx{290} \posx{300}v\posx{310}Ё\posx{320} \posx{330}t\posx{340}r\posx{350}Ж\posx{360} \posx{370}n\posx{380}Β\posx{390}y\posx{400}.\posx{410}.\posx{420}.\posx{430} \posx{440}Σ\posx{450}a\posx{460}n\posx{470}g\posx{480} \posx{490}c\posx{500}h\posx{510}ω\posx{520} \posx{530}b\posx{540}Ε\posx{550}n\posx{560}\nk\posx{10}h\posx{20}Α\posx{30}m\posx{40} \posx{50}p\posx{60}h\posx{70}Α\posx{80}.\posx{90}"\posx{100}
+<0003> \s{strS[1901]}
+<0004> \s{strS[1901]}
+<0005> \s{strS[1901]}
+<0006> \s{strS[1900]}\posx{intC[1]}
+<0007> \s{strS[1900]}
+<0008> \s{strS[1901]}

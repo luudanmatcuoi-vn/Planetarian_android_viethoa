@@ -1,0 +1,734 @@
+{-# cp utf8 #- Disassembled with Kprl 1.45 -}
+
+#file 'SEEN1005.TXT'
+#resource 'SEEN1005.utf'
+
+#kidoku_type 2
+
+#entrypoint 000 // Z00
+
+HideSyscom
+HideCursor
+DrawManual
+intF[1127] = 0
+intF[1128] = 440
+intF[1129] = 0
+intF[1130] = 880
+farcall(1010, 0)
+FlushClick
+intC[0] = 3000
+InitExFrames({0, 0, 255, intC[0]})
+
+  @1
+intC[0] = ReadExFrames({0, intC[1]})
+GetCursorPos(intA[1000], intA[1001], intA[1002], intA[1003])
+goto_unless(intA[1002] == 2) @2
+intF[1000] = 1
+FlushClick
+goto @3
+
+  @2
+intF[1000] = 0
+
+  @3
+goto_unless(intF[1000] == 1) @4
+intC[0] = 0
+intC[1] = 255
+
+  @4
+OBJFRONTSET_REPTR(73, 0, intC[1])
+OBJFRONTSET_REPTR(74, 0, intC[1])
+OBJFRONTSET_REPTR(75, 0, intC[1])
+OBJFRONTSET_REPTR(76, 0, intC[1])
+OBJFRONTSET_REPTR(77, 0, intC[1])
+OBJFRONTSET_REPTR(78, 0, intC[1])
+OBJFRONTSET_REPTR(79, 0, intC[1])
+OBJFRONTSET_REPTR(80, 0, intC[1])
+OBJFRONTSET_REPTR(81, 0, intC[1])
+refresh
+goto_unless(!intC[0]) @5
+goto @6
+
+  @5
+goto @1
+
+  @6
+FlushClick
+intC[0] = 1000
+InitExFrames({0, 0, 255, intC[0]})
+
+  @7
+intC[0] = ReadExFrames({0, intC[1]})
+GetCursorPos(intA[1000], intA[1001], intA[1002], intA[1003])
+goto_unless(intA[1002] == 2) @8
+intF[1000] = 1
+FlushClick
+goto @9
+
+  @8
+intF[1000] = 0
+
+  @9
+goto_unless(intF[1000] == 1) @10
+intC[0] = 0
+intC[1] = 255
+
+  @10
+refresh
+goto_unless(!intC[0]) @11
+goto @12
+
+  @11
+goto @7
+
+  @12
+FlushClick
+intC[0] = 14000
+InitExFrames({0, 0, 880, intC[0]})
+
+  @13
+intC[0] = ReadExFrames({0, intC[1]})
+GetCursorPos(intA[1000], intA[1001], intA[1002], intA[1003])
+goto_unless(intA[1002] == 2) @14
+intF[1000] = 1
+FlushClick
+goto @15
+
+  @14
+intF[1000] = 0
+
+  @15
+goto_unless(intF[1000] == 1) @16
+intC[0] = 0
+intC[1] = 880
+
+  @16
+objAdjust(73, 0, 0, intC[1])
+objAdjust(74, 0, 0, intC[1])
+objAdjust(75, 0, 0, intC[1])
+objAdjust(76, 0, 0, intC[1])
+objAdjust(77, 0, 0, intC[1])
+objAdjust(78, 0, 0, intC[1])
+objAdjust(79, 0, 0, intC[1])
+objAdjust(80, 0, 0, intC[1])
+refresh
+goto_unless(!intC[0]) @17
+goto @18
+
+  @17
+goto @13
+
+  @18
+strS[1001] = 'EV08A'
+intA[1000] = strcmp(strS[1001], 'NONE')
+goto_unless(!intA[1000]) @19
+strclear(strS[1001])
+
+  @19
+strS[1002] = 'NONE'
+intA[1000] = strcmp(strS[1002], 'NONE')
+goto_unless(!intA[1000]) @20
+strclear(strS[1002])
+
+  @20
+intF[1120] = 1
+intF[1116] = 0
+intF[1117] = 9
+strS[1003] = 'NONE'
+intA[1000] = strcmp(strS[1003], 'NONE')
+goto_unless(!intA[1000]) @21
+strclear(strS[1003])
+
+  @21
+intF[1112] = -1
+intF[1113] = -1
+intF[1114] = -1
+intF[1115] = -1
+farcall(9050, 0)
+intF[1120] = 0
+SET_WAIP_WINDOWCLOSE_OFF
+SET_GRPCOM_WINDOWCLOSE_OFF
+DrawAuto
+ShowCursor
+EnableSyscom
+rtl
+
+#entrypoint 001 // Z01
+
+HideSyscom
+HideCursor
+intA[1000] = SkipAnimations
+goto_unless(!intA[1000]) @22
+intG[1050] = 1
+goto @23
+
+  @22
+goto_unless(intA[1000] == 1) @23
+intG[1050] = 0
+
+  @23
+intG[1049] = 1
+intA[1000] = SkipAnimations
+goto_unless(!intA[1000]) @24
+intF[1017] = 1
+goto @25
+
+  @24
+goto_unless(intA[1000] == 1) @25
+intF[1017] = 0
+
+  @25
+SetSkipAnimations(0)
+goto @26
+goto @26
+SetSkipAnimations(1)
+
+  @26
+objBgClear(73)
+objBgOfFileGan(73, '???', 'BG26_03')
+objBgMove(73, 80, 14)
+objBgPattNo(73, 0)
+objBgComposite(73, 1)
+objBgDispRect(73, 80, 14, 640, 440)
+ganBgLoop2(73, 0)
+objBgShow(73, 1)
+bgrLoadHaikei('BG26', 4)
+goto_unless(intG[1049] == 1) @28
+goto_unless(intG[1050] == 1) @27
+SetSkipAnimations(0)
+goto @28
+
+  @27
+goto_unless(!intG[1050]) @28
+SetSkipAnimations(1)
+
+  @28
+intG[1049] = 0
+intA[0] = 0
+ResetExTimer
+intA[0] += 1200
+timeEx(intA[0])
+gosub @59
+msgClear
+koePlay(109178, 0)
+#res<0000>
+strS[1900] = 'YumemiBån ngh× th® nào... v¯ cung thiên vÏn?'
+gosub @84
+gosub @77
+intA[0] += 5100
+timeEx(intA[0])
+msgClear
+gosub @59
+koePlay(109181, 0)
+#res<0001>
+strS[1900] = 'YumemiB¢t k° lúc nào bån cøng ßÞ½c ng§m nhìn... nh÷ng ßi¯u tuy²t vºi, nh÷ng tia sáng... l¢p lánh... tÞ»ng nhÞ vô t¦n.'
+gosub @84
+gosub @77
+intA[0] += 11400
+timeEx(intA[0])
+msgClear
+gosub @59
+koePlay(109184, 0)
+#res<0002>
+strS[1900] = 'YumemiVô vàn nh÷ng vì sao... trong vø trû này... ßang chº bån khám phá.'
+gosub @84
+gosub @77
+intA[0] += 3700
+timeEx(intA[0])
+intA[1000] = SkipAnimations
+goto_unless(!intA[1000]) @29
+intG[1050] = 1
+goto @30
+
+  @29
+goto_unless(intA[1000] == 1) @30
+intG[1050] = 0
+
+  @30
+intG[1049] = 1
+intA[1000] = SkipAnimations
+goto_unless(!intA[1000]) @31
+intF[1017] = 1
+goto @32
+
+  @31
+goto_unless(intA[1000] == 1) @32
+intF[1017] = 0
+
+  @32
+SetSkipAnimations(0)
+goto @33
+goto @33
+SetSkipAnimations(1)
+
+  @33
+strS[1001] = 'BG22E'
+intA[1000] = strcmp(strS[1001], 'NONE')
+goto_unless(!intA[1000]) @34
+strclear(strS[1001])
+
+  @34
+strS[1002] = 'NONE'
+intA[1000] = strcmp(strS[1002], 'NONE')
+goto_unless(!intA[1000]) @35
+strclear(strS[1002])
+
+  @35
+intF[1120] = 1
+intF[1116] = 0
+intF[1117] = 4
+strS[1003] = 'NONE'
+intA[1000] = strcmp(strS[1003], 'NONE')
+goto_unless(!intA[1000]) @36
+strclear(strS[1003])
+
+  @36
+intF[1112] = -1
+intF[1113] = -1
+intF[1114] = -1
+intF[1115] = -1
+farcall(9050, 0)
+intF[1120] = 0
+SET_WAIP_WINDOWCLOSE_OFF
+SET_GRPCOM_WINDOWCLOSE_OFF
+goto_unless(intG[1049] == 1) @38
+goto_unless(intG[1050] == 1) @37
+SetSkipAnimations(0)
+goto @38
+
+  @37
+goto_unless(!intG[1050]) @38
+SetSkipAnimations(1)
+
+  @38
+intG[1049] = 0
+intA[0] = 0
+ResetExTimer
+intA[0] += 2450
+timeEx(intA[0])
+gosub @68
+msgClear
+koePlay(109195, 0)
+#res<0003>
+strS[1900] = 'YumemiBån ngh× th® nào... v¯ cung thiên vÏn?'
+gosub @84
+gosub @77
+intA[0] += 1700
+timeEx(intA[0])
+intA[1000] = SkipAnimations
+goto_unless(!intA[1000]) @39
+intG[1050] = 1
+goto @40
+
+  @39
+goto_unless(intA[1000] == 1) @40
+intG[1050] = 0
+
+  @40
+intG[1049] = 1
+intA[1000] = SkipAnimations
+goto_unless(!intA[1000]) @41
+intF[1017] = 1
+goto @42
+
+  @41
+goto_unless(intA[1000] == 1) @42
+intF[1017] = 0
+
+  @42
+SetSkipAnimations(0)
+goto @43
+goto @43
+SetSkipAnimations(1)
+
+  @43
+strS[1001] = 'BG21E'
+intA[1000] = strcmp(strS[1001], 'NONE')
+goto_unless(!intA[1000]) @44
+strclear(strS[1001])
+
+  @44
+strS[1002] = 'NONE'
+intA[1000] = strcmp(strS[1002], 'NONE')
+goto_unless(!intA[1000]) @45
+strclear(strS[1002])
+
+  @45
+intF[1120] = 1
+intF[1116] = 0
+intF[1117] = 4
+strS[1003] = 'NONE'
+intA[1000] = strcmp(strS[1003], 'NONE')
+goto_unless(!intA[1000]) @46
+strclear(strS[1003])
+
+  @46
+intF[1112] = -1
+intF[1113] = -1
+intF[1114] = -1
+intF[1115] = -1
+farcall(9050, 0)
+intF[1120] = 0
+SET_WAIP_WINDOWCLOSE_OFF
+SET_GRPCOM_WINDOWCLOSE_OFF
+goto_unless(intG[1049] == 1) @48
+goto_unless(intG[1050] == 1) @47
+SetSkipAnimations(0)
+goto @48
+
+  @47
+goto_unless(!intG[1050]) @48
+SetSkipAnimations(1)
+
+  @48
+intG[1049] = 0
+intA[0] = 0
+ResetExTimer
+intA[0] += 1400
+timeEx(intA[0])
+gosub @59
+msgClear
+koePlay(109198, 0)
+#res<0004>
+strS[1900] = 'YumemiB¢t k° lúc nào bån... cøng ßÞ½c ng§m nhìn... nh÷ng ßi¯u tuy²t vºi, nh÷ng tia sáng... l¢p lánh... tÞ»ng nhÞ vô t¦n.'
+gosub @84
+gosub @77
+intA[0] += 6400
+timeEx(intA[0])
+intA[1000] = SkipAnimations
+goto_unless(!intA[1000]) @49
+intG[1050] = 1
+goto @50
+
+  @49
+goto_unless(intA[1000] == 1) @50
+intG[1050] = 0
+
+  @50
+intG[1049] = 1
+intA[1000] = SkipAnimations
+goto_unless(!intA[1000]) @51
+intF[1017] = 1
+goto @52
+
+  @51
+goto_unless(intA[1000] == 1) @52
+intF[1017] = 0
+
+  @52
+SetSkipAnimations(0)
+goto @53
+goto @53
+SetSkipAnimations(1)
+
+  @53
+strS[1001] = 'BG29E'
+intA[1000] = strcmp(strS[1001], 'NONE')
+goto_unless(!intA[1000]) @54
+strclear(strS[1001])
+
+  @54
+strS[1002] = 'NONE'
+intA[1000] = strcmp(strS[1002], 'NONE')
+goto_unless(!intA[1000]) @55
+strclear(strS[1002])
+
+  @55
+intF[1120] = 1
+intF[1116] = 0
+intF[1117] = 4
+strS[1003] = 'NONE'
+intA[1000] = strcmp(strS[1003], 'NONE')
+goto_unless(!intA[1000]) @56
+strclear(strS[1003])
+
+  @56
+intF[1112] = -1
+intF[1113] = -1
+intF[1114] = -1
+intF[1115] = -1
+farcall(9050, 0)
+intF[1120] = 0
+SET_WAIP_WINDOWCLOSE_OFF
+SET_GRPCOM_WINDOWCLOSE_OFF
+goto_unless(intG[1049] == 1) @58
+goto_unless(intG[1050] == 1) @57
+SetSkipAnimations(0)
+goto @58
+
+  @57
+goto_unless(!intG[1050]) @58
+SetSkipAnimations(1)
+
+  @58
+intG[1049] = 0
+intA[0] = 0
+ResetExTimer
+intA[0] += 3300
+timeEx(intA[0])
+gosub @59
+msgClear
+koePlay(109204, 0)
+#res<0005>
+strS[1900] = 'YumemiVô vàn nh÷ng vì sao... trong vø trû này... ßang chº bån... khám phá.'
+gosub @84
+gosub @77
+intF[1127] = 1
+intF[1128] = 440
+intF[1129] = 0
+farcall(1010, 1)
+objBgShow(73, 0)
+objBgShow(74, 0)
+objBgShow(75, 0)
+objBgShow(76, 0)
+objBgShow(77, 0)
+intA[0] += 7500
+timeEx(intA[0])
+msgClear
+ShowCursor
+EnableSyscom
+rtl
+
+  @59
+intG[1045] = MessageSpeed
+intG[1048] = MessageNoWait
+goto_unless(!intG[1048]) @60
+intG[1046] = 0
+intG[1047] = intG[1043]
+goto @62
+
+  @60
+goto_unless(intG[1048] == 1) @61
+intG[1046] = 1
+intG[1047] = 0
+goto @62
+
+  @61
+goto_unless(intG[1048] == 2) @62
+intG[1046] = 1
+intG[1047] = 1
+
+  @62
+intG[1044] = 1
+SetMessageSpeed(100)
+goto @65
+goto @63
+intF[1081] = 2
+goto @64
+
+  @63
+intF[1081] = 1
+
+  @64
+goto @67
+
+  @65
+goto @66
+intF[1081] = 0
+goto @67
+
+  @66
+intF[1081] = 0
+
+  @67
+SetMessageNoWait(intF[1081])
+ret
+
+  @68
+intG[1045] = MessageSpeed
+intG[1048] = MessageNoWait
+goto_unless(!intG[1048]) @69
+intG[1046] = 0
+intG[1047] = intG[1043]
+goto @71
+
+  @69
+goto_unless(intG[1048] == 1) @70
+intG[1046] = 1
+intG[1047] = 0
+goto @71
+
+  @70
+goto_unless(intG[1048] == 2) @71
+intG[1046] = 1
+intG[1047] = 1
+
+  @71
+intG[1044] = 1
+SetMessageSpeed(85)
+goto @74
+goto @72
+intF[1081] = 2
+goto @73
+
+  @72
+intF[1081] = 1
+
+  @73
+goto @76
+
+  @74
+goto @75
+intF[1081] = 0
+goto @76
+
+  @75
+intF[1081] = 0
+
+  @76
+SetMessageNoWait(intF[1081])
+ret
+
+  @77
+goto_unless(intG[1044] == 1) @83
+SetMessageSpeed(intG[1045])
+goto_unless(intG[1046] == 1) @80
+goto_unless(intG[1047] == 1) @78
+intG[1048] = 2
+goto @79
+
+  @78
+goto_unless(!intG[1047]) @79
+intG[1048] = 1
+
+  @79
+goto @82
+
+  @80
+goto_unless(!intG[1046]) @82
+goto_unless(intG[1047] == 1) @81
+intG[1048] = 0
+goto @82
+
+  @81
+goto_unless(!intG[1047]) @82
+intG[1048] = 0
+
+  @82
+SetMessageNoWait(intG[1048])
+
+  @83
+intG[1044] = 0
+ret
+halt
+CallDLL(0, 10, intC[1] | 1179648)
+goto @85
+
+  @84
+CallDLL(0, 10, 1181548)
+
+  @85
+DisableAutoSavepoints
+store = 8
+strS[1900] = '        '
+
+  @86
+goto_unless(store < 512) @87
+strS[1900] += strS[1900]
+store *= 2
+goto @86
+
+  @87
+CallDLL(0, 12, 1181548, 131073)
+goto_on(store){  @96, @97, @95, @88, @89, @92, @93, @94 }
+goto @97
+
+  @88
+br
+goto @87
+
+  @89
+goto_unless(intC[0]) @90
+gosub @98
+goto @91
+
+  @90
+page
+
+  @91
+TextPos(0, 0)
+CallDLL(0, 13, 1181548)
+goto @87
+
+  @92
+SetIndent
+goto @87
+
+  @93
+ClearIndent
+goto @87
+
+  @94
+FontColour(6)
+CallDLL(0, 21)
+intC[0] += 1
+
+  @95
+#res<0006>
+goto @87
+
+  @96
+strS[1901] = strS[1900]
+strS[1900] = 'Error: '
+strS[1900] += strS[1901]
+strS[1900] += '. Unable to format text.'
+strclear(strS[1901])
+FastText
+#res<0007>
+NormalText
+
+  @97
+EnableAutoSavepoints
+ret
+goto @87
+intC[1] = 0
+goto @99
+
+  @98
+intC[1] = 1
+goto @99
+intC[1] = 2
+
+  @99
+store = 8
+strS[1901] = '        '
+
+  @100
+goto_unless(store < 2048) @101
+strS[1901] += strS[1901]
+store *= 2
+goto @100
+
+  @101
+FlushClick
+spause
+GetCursorPos(intC[3], intC[4], intC[2], store)
+goto_if(intC[2] != 2) @102
+GetWakuAll
+CallDLL(0, 23, intC[3], intC[4], 1181549, store)
+goto_if(!store) @102
+CallDLL(0, 105, 1181549, 1)
+goto @101
+
+  @102
+strclear(strS[1901])
+goto_on(intC[1]){  @105, @104, @103 }
+goto @105
+
+  @103
+CallDLL(0, 104, -1)
+goto_unless(store) @104
+#res<0008>
+strS[1900] = ''
+gosub @84
+goto @105
+
+  @104
+intC[0] = 0
+msgClear
+CallDLL(0, 20)
+
+  @105
+store = 1
+ret
+eof

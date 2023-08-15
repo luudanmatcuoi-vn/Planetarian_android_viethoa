@@ -1,0 +1,914 @@
+{-# cp utf8 #- Disassembled with Kprl 1.45 -}
+
+#file 'SEEN1000.TXT'
+#resource 'SEEN1000.utf'
+
+#kidoku_type 2
+
+#entrypoint 000 // Z00
+
+HideSyscom
+HideCursor
+DrawManual
+wait(500)
+objClear(0)
+objOfFile(0, 'SIROS')
+objMove(0, 0, 0)
+objPattNo(0, 0)
+objShow(0, 1)
+FlushClick
+intC[0] = 1000
+InitExFrames({0, 0, 255, intC[0]})
+
+  @1
+intC[0] = ReadExFrames({0, intC[1]})
+GetCursorPos(intA[1000], intA[1001], intA[1002], intA[1003])
+goto_unless(intA[1002] == 2) @2
+intF[1000] = 1
+FlushClick
+goto @3
+
+  @2
+intF[1000] = 0
+
+  @3
+goto_unless(intF[1000] == 1) @4
+intC[0] = 0
+intC[1] = 255
+
+  @4
+objAlpha(0, intC[1])
+refresh
+goto_unless(!intC[0]) @5
+goto @6
+
+  @5
+goto @1
+
+  @6
+recFill(0, 0, 800, 600, 0, 255, 255, 255)
+refresh
+objDelete(0)
+wait(1000)
+objClear(0)
+objOfFile(0, 'OP00')
+objMove(0, 310, 271)
+objPattNo(0, 0)
+objShow(0, 1)
+FlushClick
+intC[0] = 800
+InitExFrames({0, 0, 255, intC[0]})
+
+  @7
+intC[0] = ReadExFrames({0, intC[1]})
+GetCursorPos(intA[1000], intA[1001], intA[1002], intA[1003])
+goto_unless(intA[1002] == 2) @8
+intF[1000] = 1
+FlushClick
+goto @9
+
+  @8
+intF[1000] = 0
+
+  @9
+goto_unless(intF[1000] == 1) @10
+intC[0] = 0
+intC[1] = 255
+
+  @10
+objAlpha(0, intC[1])
+refresh
+goto_unless(!intC[0]) @11
+goto @12
+
+  @11
+goto @7
+
+  @12
+waitC(600)
+FlushClick
+intC[0] = 800
+InitExFrames({0, 255, 0, intC[0]})
+
+  @13
+intC[0] = ReadExFrames({0, intC[1]})
+GetCursorPos(intA[1000], intA[1001], intA[1002], intA[1003])
+goto_unless(intA[1002] == 2) @14
+intF[1000] = 1
+FlushClick
+goto @15
+
+  @14
+intF[1000] = 0
+
+  @15
+goto_unless(intF[1000] == 1) @16
+intC[0] = 0
+intC[1] = 0
+
+  @16
+objAlpha(0, intC[1])
+refresh
+goto_unless(!intC[0]) @17
+goto @18
+
+  @17
+goto @13
+
+  @18
+objDelete(0)
+waitC(100)
+objClear(0)
+objClear(1)
+objOfFile(0, 'OP01')
+objOfFile(1, 'KUROS')
+objMove(0, 358, 256)
+objMove(1, 0, 0)
+objPattNo(0, 0)
+objPattNo(1, 0)
+objShow(0, 1)
+objShow(1, 0)
+FlushClick
+intC[0] = 1500
+InitExFrames({0, 0, 255, intC[0]})
+
+  @19
+intC[0] = ReadExFrames({0, intC[1]})
+GetCursorPos(intA[1000], intA[1001], intA[1002], intA[1003])
+goto_unless(intA[1002] == 2) @20
+intF[1000] = 1
+FlushClick
+goto @21
+
+  @20
+intF[1000] = 0
+
+  @21
+goto_unless(intF[1000] == 1) @22
+intC[0] = 0
+intC[1] = 255
+
+  @22
+objAlpha(0, intC[1])
+refresh
+goto_unless(!intC[0]) @23
+goto @24
+
+  @23
+goto @19
+
+  @24
+waitC(1200)
+FlushClick
+intC[0] = 1500
+InitExFrames({0, 255, 0, intC[0]})
+
+  @25
+intC[0] = ReadExFrames({0, intC[1]})
+GetCursorPos(intA[1000], intA[1001], intA[1002], intA[1003])
+goto_unless(intA[1002] == 2) @26
+intF[1000] = 1
+FlushClick
+goto @27
+
+  @26
+intF[1000] = 0
+
+  @27
+goto_unless(intF[1000] == 1) @28
+intC[0] = 0
+intC[1] = 0
+
+  @28
+objAlpha(0, intC[1])
+refresh
+goto_unless(!intC[0]) @29
+goto @30
+
+  @29
+goto @25
+
+  @30
+waitC(500)
+objShow(1, 1)
+FlushClick
+intC[0] = 2000
+InitExFrames({0, 0, 255, intC[0]})
+
+  @31
+intC[0] = ReadExFrames({0, intC[1]})
+GetCursorPos(intA[1000], intA[1001], intA[1002], intA[1003])
+goto_unless(intA[1002] == 2) @32
+intF[1000] = 1
+FlushClick
+goto @33
+
+  @32
+intF[1000] = 0
+
+  @33
+goto_unless(intF[1000] == 1) @34
+intC[0] = 0
+intC[1] = 255
+
+  @34
+objAlpha(1, intC[1])
+refresh
+goto_unless(!intC[0]) @35
+goto @36
+
+  @35
+goto @31
+
+  @36
+recFill(0, 0, 800, 600, 0, 0, 0, 0)
+objDelete(0)
+objDelete(1)
+waitC(1000)
+bgmPlay('BGM01')
+ResetExTimer
+timeEx(2500)
+objClear(0)
+objOfFile(0, 'OP10')
+objMove(0, 0, 208)
+objPattNo(0, 0)
+objShow(0, 1)
+FlushClick
+intC[0] = 2000
+InitExFrames({0, 0, 255, intC[0]})
+
+  @37
+intC[0] = ReadExFrames({0, intC[1]})
+GetCursorPos(intA[1000], intA[1001], intA[1002], intA[1003])
+goto_unless(intA[1002] == 2) @38
+intF[1000] = 1
+FlushClick
+goto @39
+
+  @38
+intF[1000] = 0
+
+  @39
+goto_unless(intF[1000] == 1) @40
+intC[0] = 0
+intC[1] = 255
+
+  @40
+objAlpha(0, intC[1])
+refresh
+goto_unless(!intC[0]) @41
+goto @42
+
+  @41
+goto @37
+
+  @42
+timeEx(5500)
+FlushClick
+intC[0] = 2000
+InitExFrames({0, 255, 0, intC[0]})
+
+  @43
+intC[0] = ReadExFrames({0, intC[1]})
+GetCursorPos(intA[1000], intA[1001], intA[1002], intA[1003])
+goto_unless(intA[1002] == 2) @44
+intF[1000] = 1
+FlushClick
+goto @45
+
+  @44
+intF[1000] = 0
+
+  @45
+goto_unless(intF[1000] == 1) @46
+intC[0] = 0
+intC[1] = 0
+
+  @46
+objAlpha(0, intC[1])
+refresh
+goto_unless(!intC[0]) @47
+goto @48
+
+  @47
+goto @43
+
+  @48
+objDelete(0)
+objClear(0)
+objOfFile(0, 'OP11')
+objMove(0, 0, 208)
+objPattNo(0, 0)
+objShow(0, 1)
+FlushClick
+intC[0] = 2000
+InitExFrames({0, 0, 255, intC[0]})
+
+  @49
+intC[0] = ReadExFrames({0, intC[1]})
+GetCursorPos(intA[1000], intA[1001], intA[1002], intA[1003])
+goto_unless(intA[1002] == 2) @50
+intF[1000] = 1
+FlushClick
+goto @51
+
+  @50
+intF[1000] = 0
+
+  @51
+goto_unless(intF[1000] == 1) @52
+intC[0] = 0
+intC[1] = 255
+
+  @52
+objAlpha(0, intC[1])
+refresh
+goto_unless(!intC[0]) @53
+goto @54
+
+  @53
+goto @49
+
+  @54
+timeEx(10700)
+FlushClick
+intC[0] = 2000
+InitExFrames({0, 255, 0, intC[0]})
+
+  @55
+intC[0] = ReadExFrames({0, intC[1]})
+GetCursorPos(intA[1000], intA[1001], intA[1002], intA[1003])
+goto_unless(intA[1002] == 2) @56
+intF[1000] = 1
+FlushClick
+goto @57
+
+  @56
+intF[1000] = 0
+
+  @57
+goto_unless(intF[1000] == 1) @58
+intC[0] = 0
+intC[1] = 0
+
+  @58
+objAlpha(0, intC[1])
+refresh
+goto_unless(!intC[0]) @59
+goto @60
+
+  @59
+goto @55
+
+  @60
+objDelete(0)
+objClear(0)
+objOfFile(0, 'OP12')
+objMove(0, 0, 208)
+objPattNo(0, 0)
+objShow(0, 1)
+FlushClick
+intC[0] = 2000
+InitExFrames({0, 0, 255, intC[0]})
+
+  @61
+intC[0] = ReadExFrames({0, intC[1]})
+GetCursorPos(intA[1000], intA[1001], intA[1002], intA[1003])
+goto_unless(intA[1002] == 2) @62
+intF[1000] = 1
+FlushClick
+goto @63
+
+  @62
+intF[1000] = 0
+
+  @63
+goto_unless(intF[1000] == 1) @64
+intC[0] = 0
+intC[1] = 255
+
+  @64
+objAlpha(0, intC[1])
+refresh
+goto_unless(!intC[0]) @65
+goto @66
+
+  @65
+goto @61
+
+  @66
+timeEx(16300)
+wavLoop('SE10', 0, 1000)
+FlushClick
+intC[0] = 2000
+InitExFrames({0, 255, 0, intC[0]})
+
+  @67
+intC[0] = ReadExFrames({0, intC[1]})
+GetCursorPos(intA[1000], intA[1001], intA[1002], intA[1003])
+goto_unless(intA[1002] == 2) @68
+intF[1000] = 1
+FlushClick
+goto @69
+
+  @68
+intF[1000] = 0
+
+  @69
+goto_unless(intF[1000] == 1) @70
+intC[0] = 0
+intC[1] = 0
+
+  @70
+objAlpha(0, intC[1])
+refresh
+goto_unless(!intC[0]) @71
+goto @72
+
+  @71
+goto @67
+
+  @72
+objDelete(0)
+objClear(0)
+objClear(1)
+objClear(2)
+objOfFile(0, 'BG26O_00')
+objOfFile(1, 'BG26O_01')
+objOfFile(2, 'BG26O_02')
+objMove(0, 80, 14)
+objMove(1, 460, 14)
+objMove(2, 1410, 14)
+objPattNo(0, 0)
+objPattNo(1, 0)
+objPattNo(2, 0)
+objDispRect(0, 80, 14, 640, 440)
+objDispRect(1, 80, 14, 640, 440)
+objDispRect(2, 80, 14, 640, 440)
+objShow(0, 1)
+objShow(1, 1)
+objShow(2, 1)
+FlushClick
+intC[0] = 800
+InitExFrames({0, 0, 255, intC[0]})
+
+  @73
+intC[0] = ReadExFrames({0, intC[1]})
+GetCursorPos(intA[1000], intA[1001], intA[1002], intA[1003])
+goto_unless(intA[1002] == 2) @74
+intF[1000] = 1
+FlushClick
+goto @75
+
+  @74
+intF[1000] = 0
+
+  @75
+goto_unless(intF[1000] == 1) @76
+intC[0] = 0
+intC[1] = 255
+
+  @76
+objAlpha(0, intC[1])
+objAlpha(1, intC[1])
+objAlpha(2, intC[1])
+refresh
+goto_unless(!intC[0]) @77
+goto @78
+
+  @77
+goto @73
+
+  @78
+timeEx(19500)
+objDelete(0)
+objDelete(1)
+objDelete(2)
+DrawAuto
+bgrLoadHaikei('BG26O', 9)
+TextWindow(11)
+gosub @110
+koePlay(100529, 0)
+#res<0000>
+strS[1900] = 'Yumemi... bån ngh× th® nào v¯ cung thiên vÏn?'
+gosub @126
+gosub @119
+timeEx(23000)
+wavLoop('SE09', 1, 8000)
+msgClear
+gosub @110
+koePlay(100550, 0)
+#res<0001>
+strS[1900] = 'YumemiB¢t k° lúc nào, bån cøng ßÞ½c ng§m nhìn nh÷ng ßi¯u tuy²t vºi, nh÷ng tia sáng l¢p lánh tÞ»ng nhÞ vô t¦n.'
+gosub @126
+gosub @119
+timeEx(29800)
+msgClear
+gosub @110
+koePlay(100562, 0)
+#res<0002>
+strS[1900] = 'YumemiVô vàn nh÷ng vì sao trong vû trû này ßang chº bån khám phá.'
+gosub @126
+gosub @119
+timeEx(34900)
+wavFadeOut(1, 4000)
+msgClear
+gosub @110
+koePlay(100578, 0)
+#res<0003>
+strS[1900] = 'YumemiBån ngh× th® nào v¯ cung thiên vÏn?'
+gosub @126
+gosub @119
+timeEx(38000)
+msgHide
+timeEx(38900)
+wavFadeOut(0, 4000)
+TextWindow(0)
+grpOpenBg('KUROS', 9)
+grpBuffer('BG27O_00', 2)
+timeEx(39000)
+intA[1000] = SkipAnimations
+goto_unless(!intA[1000]) @79
+intG[1050] = 1
+goto @80
+
+  @79
+goto_unless(intA[1000] == 1) @80
+intG[1050] = 0
+
+  @80
+intG[1049] = 1
+intA[1000] = SkipAnimations
+goto_unless(!intA[1000]) @81
+intF[1017] = 1
+goto @82
+
+  @81
+goto_unless(intA[1000] == 1) @82
+intF[1017] = 0
+
+  @82
+SetSkipAnimations(0)
+goto @83
+goto @83
+SetSkipAnimations(1)
+
+  @83
+recZoom(0, 0, 1280, 880, 560, 140, 320, 220, 2, 80, 14, 640, 440, 3600)
+goto_unless(intG[1049] == 1) @85
+goto_unless(intG[1050] == 1) @84
+SetSkipAnimations(0)
+goto @85
+
+  @84
+goto_unless(!intG[1050]) @85
+SetSkipAnimations(1)
+
+  @85
+intG[1049] = 0
+DrawManual
+objClear(0)
+objClear(1)
+objOfFile(0, 'BG27O_01')
+objOfFile(1, 'OP20')
+objMove(0, 80, 14)
+objMove(1, 80, 14)
+objPattNo(0, 0)
+objPattNo(1, 0)
+objShow(0, 1)
+objShow(1, 0)
+FlushClick
+intC[0] = 2000
+InitExFrames({0, 0, 255, intC[0]})
+
+  @86
+intC[0] = ReadExFrames({0, intC[1]})
+GetCursorPos(intA[1000], intA[1001], intA[1002], intA[1003])
+goto_unless(intA[1002] == 2) @87
+intF[1000] = 1
+FlushClick
+goto @88
+
+  @87
+intF[1000] = 0
+
+  @88
+goto_unless(intF[1000] == 1) @89
+intC[0] = 0
+intC[1] = 255
+
+  @89
+objAlpha(0, intC[1])
+refresh
+goto_unless(!intC[0]) @90
+goto @91
+
+  @90
+goto @86
+
+  @91
+recFill(0, 0, 800, 600, 0, 0, 0, 0)
+freeDC(2)
+timeEx(46100)
+objShow(1, 1)
+FlushClick
+intC[0] = 2000
+InitExFrames({0, 0, 255, intC[0]})
+
+  @92
+intC[0] = ReadExFrames({0, intC[1]})
+GetCursorPos(intA[1000], intA[1001], intA[1002], intA[1003])
+goto_unless(intA[1002] == 2) @93
+intF[1000] = 1
+FlushClick
+goto @94
+
+  @93
+intF[1000] = 0
+
+  @94
+goto_unless(intF[1000] == 1) @95
+intC[0] = 0
+intC[1] = 255
+
+  @95
+objAlpha(1, intC[1])
+refresh
+goto_unless(!intC[0]) @96
+goto @97
+
+  @96
+goto @92
+
+  @97
+timeEx(49600)
+FlushClick
+intC[0] = 1000
+InitExFrames({0, 255, 0, intC[0]})
+
+  @98
+intC[0] = ReadExFrames({0, intC[1]})
+GetCursorPos(intA[1000], intA[1001], intA[1002], intA[1003])
+goto_unless(intA[1002] == 2) @99
+intF[1000] = 1
+FlushClick
+goto @100
+
+  @99
+intF[1000] = 0
+
+  @100
+goto_unless(intF[1000] == 1) @101
+intC[0] = 0
+intC[1] = 0
+
+  @101
+objAlpha(1, intC[1])
+refresh
+goto_unless(!intC[0]) @102
+goto @103
+
+  @102
+goto @98
+
+  @103
+timeEx(51900)
+FlushClick
+intC[0] = 2000
+InitExFrames({0, 255, 0, intC[0]})
+
+  @104
+intC[0] = ReadExFrames({0, intC[1]})
+GetCursorPos(intA[1000], intA[1001], intA[1002], intA[1003])
+goto_unless(intA[1002] == 2) @105
+intF[1000] = 1
+FlushClick
+goto @106
+
+  @105
+intF[1000] = 0
+
+  @106
+goto_unless(intF[1000] == 1) @107
+intC[0] = 0
+intC[1] = 0
+
+  @107
+objAlpha(0, intC[1])
+refresh
+goto_unless(!intC[0]) @108
+goto @109
+
+  @108
+goto @104
+
+  @109
+objDelete(0)
+objDelete(1)
+timeEx(54200)
+bgmFadeOut(2000)
+wait(2000)
+CLEAR_MSGBK
+DrawAuto
+ShowCursor
+EnableSyscom
+rtl
+
+  @110
+intG[1045] = MessageSpeed
+intG[1048] = MessageNoWait
+goto_unless(!intG[1048]) @111
+intG[1046] = 0
+intG[1047] = intG[1043]
+goto @113
+
+  @111
+goto_unless(intG[1048] == 1) @112
+intG[1046] = 1
+intG[1047] = 0
+goto @113
+
+  @112
+goto_unless(intG[1048] == 2) @113
+intG[1046] = 1
+intG[1047] = 1
+
+  @113
+intG[1044] = 1
+SetMessageSpeed(100)
+goto @116
+goto @114
+intF[1081] = 2
+goto @115
+
+  @114
+intF[1081] = 1
+
+  @115
+goto @118
+
+  @116
+goto @117
+intF[1081] = 0
+goto @118
+
+  @117
+intF[1081] = 0
+
+  @118
+SetMessageNoWait(intF[1081])
+ret
+
+  @119
+goto_unless(intG[1044] == 1) @125
+SetMessageSpeed(intG[1045])
+goto_unless(intG[1046] == 1) @122
+goto_unless(intG[1047] == 1) @120
+intG[1048] = 2
+goto @121
+
+  @120
+goto_unless(!intG[1047]) @121
+intG[1048] = 1
+
+  @121
+goto @124
+
+  @122
+goto_unless(!intG[1046]) @124
+goto_unless(intG[1047] == 1) @123
+intG[1048] = 0
+goto @124
+
+  @123
+goto_unless(!intG[1047]) @124
+intG[1048] = 0
+
+  @124
+SetMessageNoWait(intG[1048])
+
+  @125
+intG[1044] = 0
+ret
+halt
+CallDLL(0, 10, intC[1] | 1179648)
+goto @127
+
+  @126
+CallDLL(0, 10, 1181548)
+
+  @127
+DisableAutoSavepoints
+store = 8
+strS[1900] = '        '
+
+  @128
+goto_unless(store < 512) @129
+strS[1900] += strS[1900]
+store *= 2
+goto @128
+
+  @129
+CallDLL(0, 12, 1181548, 131073)
+goto_on(store){  @138, @139, @137, @130, @131, @134, @135, @136 }
+goto @139
+
+  @130
+br
+goto @129
+
+  @131
+goto_unless(intC[0]) @132
+gosub @140
+goto @133
+
+  @132
+page
+
+  @133
+TextPos(0, 0)
+CallDLL(0, 13, 1181548)
+goto @129
+
+  @134
+SetIndent
+goto @129
+
+  @135
+ClearIndent
+goto @129
+
+  @136
+FontColour(6)
+CallDLL(0, 21)
+intC[0] += 1
+
+  @137
+#res<0004>
+goto @129
+
+  @138
+strS[1901] = strS[1900]
+strS[1900] = 'Error: '
+strS[1900] += strS[1901]
+strS[1900] += '. Unable to format text.'
+strclear(strS[1901])
+FastText
+#res<0005>
+NormalText
+
+  @139
+EnableAutoSavepoints
+ret
+goto @129
+intC[1] = 0
+goto @141
+
+  @140
+intC[1] = 1
+goto @141
+intC[1] = 2
+
+  @141
+store = 8
+strS[1901] = '        '
+
+  @142
+goto_unless(store < 2048) @143
+strS[1901] += strS[1901]
+store *= 2
+goto @142
+
+  @143
+FlushClick
+spause
+GetCursorPos(intC[3], intC[4], intC[2], store)
+goto_if(intC[2] != 2) @144
+GetWakuAll
+CallDLL(0, 23, intC[3], intC[4], 1181549, store)
+goto_if(!store) @144
+CallDLL(0, 105, 1181549, 1)
+goto @143
+
+  @144
+strclear(strS[1901])
+goto_on(intC[1]){  @147, @146, @145 }
+goto @147
+
+  @145
+CallDLL(0, 104, -1)
+goto_unless(store) @146
+#res<0006>
+strS[1900] = ''
+gosub @126
+goto @147
+
+  @146
+intC[0] = 0
+msgClear
+CallDLL(0, 20)
+
+  @147
+store = 1
+ret
+eof
