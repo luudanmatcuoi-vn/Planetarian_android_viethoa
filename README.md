@@ -24,7 +24,8 @@ _____________________________________________________________________________
 ## Link tải
 [Terabox](https://terabox.com/s/1rJsqV8fVwSxYj3h4M0XR2g) / [Mega](https://mega.nz/file/1RAGgTSL#x9YjZYvw7Fi4pNbZf4giLXl0VhHFaqp4s38b-Oxka3k) / [MediaFire](https://www.mediafire.com/file/ehpmtjxf4d8e3yp/Planetarian_Viet+Hoa_Android.rar/file) / [Drive](https://drive.google.com/file/d/1pO_HG2X0EGUJBlJI6Ux4I71icg7gFVXP/view?usp=sharing)
 <br>
-Patch từ github (dành cho bạn nào thích vọc): [link]()
+<br>
+Patch từ github (dành cho bạn nào thích vọc): [link](https://github.com/luudanmatcuoi-vn/Planetarian_android_viethoa/blob/main/Planetarian_Viet_Patch_Android.rar)
 
 ## Cách cài đặt
 - Giải nén game vừa tải :penguin: (Đừng giải nén vào thẻ nhớ)
