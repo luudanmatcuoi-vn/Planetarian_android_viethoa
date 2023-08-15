@@ -1,4 +1,4 @@
-![image](https://github.com/luudanmatcuoi-vn/Planetarian_android_viethoa/assets/44934736/4f1aa2d7-b092-405b-930a-16836af5c0e2)![image](https://github.com/luudanmatcuoi-vn/Planetarian_android_viethoa/assets/44934736/6dc75aea-8be1-4704-973f-22b60a08fde5)# Planetarian \~Nguyện ước của một ngôi sao nhỏ bé\~ Android Port
+# Planetarian \~Nguyện ước của một ngôi sao nhỏ bé\~ Android Port
 
 ![ảnh cung thiên văn](Planetarian.jpg)
 
