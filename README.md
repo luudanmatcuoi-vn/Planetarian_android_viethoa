@@ -28,7 +28,7 @@ _____________________________________________________________________________
 Patch từ github (dành cho bạn nào thích vọc): [link](https://github.com/luudanmatcuoi-vn/Planetarian_android_viethoa/blob/main/Planetarian_Viet_Patch_Android.rar)
 
 ## Cách cài đặt
-- Giải nén game vừa tải :penguin: (Đừng giải nén vào thẻ nhớ)
+- Giải nén game vừa tải, password `Luudanmatcuoi` :penguin: (Đừng giải nén vào thẻ nhớ)
 - Cài đặt app giả lập rlvm: [link](https://m.apkpure.com/vn/rlvm/is.xyz.rlvm)
 - Mở app rlvm rồi tắt
 - Sao chép và ghi đè file `DroidSansFallbackFull.ttf` vào thư mục `Android/data/is.xyz.rlvm/files` trong điện thoại.
