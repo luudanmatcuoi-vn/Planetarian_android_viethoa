@@ -38,11 +38,12 @@ Patch từ github (dành cho bạn nào thích vọc): [link](https://github.com
 
 ## Lưu ý
 - Bấm bằng 2 ngón tay để mở bảng điều khiển.
-- Thoát game bằng cách bấm "EXIT" hoặc "End the game" để các savegame của bạn lưu lại trong lần chơi tiếp theo<br>
-__LÀM ƠN THOÁT GAME BẰNG CÁCH BẤM NÚT EXIT TRONG GAME__
+- Thoát game bằng cách bấm "Thoát" hoặc "Exit the game" để các savegame của bạn lưu lại trong lần chơi tiếp theo<br>
+__LÀM ƠN THOÁT GAME BẰNG CÁCH BẤM NÚT THOÁT TRONG GAME__
 <br>( kể cả bạn save trong game rồi nhưng tiện tay tắt app rlvm thì quá trình chơi của bạn không được lưu ( Note: Đó là tính năng ) )
 - Một số chỗ sẽ ở tiếng Anh / tiếng Nhật vì... t lười.
 - Save game của rlvm không tương thích với bất cứ phiên bản nào khác.
+Note: thay thế file `global.sav.gz` (trong thư mục `savegame_android`) vào thư mục `.rlvm` để mở khoá nhanh toàn bộ tiến trình chơi game.
   
 Mình khuyến khích các bạn chơi bản HD đã được việt hoá bởi [Hoshi Visual Novel](http://www.hoshivsub.com/2018/08/planetarian-hd-edition.html) :penguin:
 
